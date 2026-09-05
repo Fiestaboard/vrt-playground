@@ -4,8 +4,8 @@
   --card: #ffffff;
   --line: #e7e0d4;
   --muted: #78716c;
-  --accent: #0d9488;      /* teal — the PR will change this */
-  --accent-soft: #ccfbf1;
+  --accent: #e11d48;      /* raspberry */
+  --accent-soft: #ffe4e6;
   --warn: #b45309;
   --warn-soft: #fef3c7;
 }
