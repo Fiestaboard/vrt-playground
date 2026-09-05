@@ -1,0 +1,28 @@
+name: Visual tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  actions: read        # download baseline artifacts from other runs
+  pull-requests: write # sticky results comment
+
+jobs:
+  vrt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Capture screenshots
+        run: node scripts/capture.mjs
+      - uses: fiestaboard/visual-regression-action@v1
+        with:
+          screenshots-dir: screenshots

@@ -1,0 +1,77 @@
+:root {
+  --ink: #1c1917;
+  --paper: #faf7f2;
+  --card: #ffffff;
+  --line: #e7e0d4;
+  --muted: #78716c;
+  --accent: #0d9488;      /* teal — the PR will change this */
+  --accent-soft: #ccfbf1;
+  --warn: #b45309;
+  --warn-soft: #fef3c7;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.topbar {
+  display: flex; align-items: center; gap: 20px;
+  padding: 14px 28px;
+  background: var(--ink); color: var(--paper);
+}
+.topbar .logo {
+  font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+  font-size: 14px;
+}
+.topbar .logo span { color: var(--accent); }
+.topbar nav { display: flex; gap: 4px; margin-left: auto; }
+.topbar nav a {
+  color: var(--paper); text-decoration: none; font-size: 13px;
+  padding: 6px 14px; border-radius: 999px; opacity: 0.75;
+}
+.topbar nav a.active { background: var(--accent); opacity: 1; font-weight: 600; }
+main { max-width: 960px; margin: 0 auto; padding: 32px 24px 64px; }
+h1 { font-size: 26px; margin: 0 0 4px; }
+.sub { color: var(--muted); margin: 0 0 28px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 18px 20px;
+}
+.stat .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.stat .value { font-size: 32px; font-weight: 800; margin: 6px 0 2px; font-variant-numeric: tabular-nums; }
+.stat .delta { font-size: 13px; color: var(--accent); font-weight: 600; }
+.stat .delta.down { color: var(--warn); }
+.section { margin-top: 36px; }
+.section h2 { font-size: 16px; margin: 0 0 14px; }
+table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+th, td { text-align: left; padding: 12px 16px; font-size: 14px; }
+thead th { background: var(--ink); color: var(--paper); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+tbody tr + tr td { border-top: 1px solid var(--line); }
+.chip { display: inline-block; border-radius: 999px; padding: 2px 12px; font-size: 12px; font-weight: 600; }
+.chip.live { background: var(--accent-soft); color: var(--accent); }
+.chip.idle { background: var(--warn-soft); color: var(--warn); }
+.board-preview {
+  font: 16px/1.9 ui-monospace, Menlo, monospace; letter-spacing: 0.35em;
+  background: var(--ink); color: var(--accent); border-radius: 14px;
+  padding: 22px 26px; text-transform: uppercase;
+}
+form label { display: block; font-size: 13px; font-weight: 600; margin: 18px 0 6px; }
+input[type="text"], select {
+  width: 100%; max-width: 420px; padding: 10px 12px; font: inherit;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--card);
+}
+.switchrow { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+.switch { width: 42px; height: 24px; border-radius: 999px; background: var(--line); position: relative; }
+.switch.on { background: var(--accent); }
+.switch::after {
+  content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px;
+  border-radius: 50%; background: #fff;
+}
+.switch.on::after { left: 21px; }
+button.primary {
+  margin-top: 28px; border: 0; background: var(--accent); color: #fff;
+  font: inherit; font-weight: 700; padding: 12px 26px; border-radius: 10px;
+}

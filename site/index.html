@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiesta Mission Control</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">Fiesta<span>■</span>Mission Control</div>
+  <nav>
+    <a class="active" href="index.html">Overview</a>
+    <a href="boards.html">Boards</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+</header>
+<main>
+  <h1>Overview</h1>
+  <p class="sub">Fleet status across every split-flap board on the network.</p>
+
+  <div class="grid">
+    <div class="card stat">
+      <div class="label">Boards online</div>
+      <div class="value">12</div>
+      <div class="delta">+2 this week</div>
+    </div>
+    <div class="card stat">
+      <div class="label">Messages today</div>
+      <div class="value">348</div>
+      <div class="delta">+14%</div>
+    </div>
+    <div class="card stat">
+      <div class="label">Avg flip time</div>
+      <div class="value">1.8s</div>
+      <div class="delta down">−0.2s</div>
+    </div>
+    <div class="card stat">
+      <div class="label">Plugin errors</div>
+      <div class="value">3</div>
+      <div class="delta down">needs attention</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Now showing — Kitchen board</h2>
+    <div class="board-preview">Taco night 7pm ·<br>RSVP by 5 ·<br>Bring limes</div>
+  </div>
+
+  <div class="section">
+    <h2>Recent activity</h2>
+    <table>
+      <thead><tr><th>Board</th><th>Plugin</th><th>Status</th><th>Last update</th></tr></thead>
+      <tbody>
+        <tr><td>Kitchen</td><td>calendar-sub</td><td><span class="chip live">live</span></td><td>2 min ago</td></tr>
+        <tr><td>Office</td><td>hacker-news</td><td><span class="chip live">live</span></td><td>11 min ago</td></tr>
+        <tr><td>Hallway</td><td>moon-phase</td><td><span class="chip idle">idle</span></td><td>3 hr ago</td></tr>
+        <tr><td>Workshop</td><td>iss-tracker</td><td><span class="chip live">live</span></td><td>just now</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+</body>
+</html>

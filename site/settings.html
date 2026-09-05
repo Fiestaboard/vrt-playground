@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings — Fiesta Mission Control</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">Fiesta<span>■</span>Mission Control</div>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="boards.html">Boards</a>
+    <a class="active" href="settings.html">Settings</a>
+  </nav>
+</header>
+<main>
+  <h1>Settings</h1>
+  <p class="sub">Network-wide defaults. Individual boards can override these.</p>
+
+  <div class="card">
+    <form>
+      <label for="name">Network name</label>
+      <input id="name" type="text" value="Casa Fiesta">
+
+      <label for="tz">Timezone</label>
+      <select id="tz"><option>America/Los_Angeles</option></select>
+
+      <label for="rotation">Default rotation interval</label>
+      <select id="rotation"><option>Every 5 minutes</option></select>
+
+      <div class="switchrow"><div class="switch on"></div><span>Quiet hours (10pm – 7am)</span></div>
+      <div class="switchrow"><div class="switch on"></div><span>Auto-update plugins</span></div>
+      <div class="switchrow"><div class="switch"></div><span>Beta firmware channel</span></div>
+
+      <button class="primary" type="button">Save changes</button>
+    </form>
+  </div>
+</main>
+</body>
+</html>
