@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status — Fiesta Mission Control</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">Fiesta<span>■</span>Mission Control</div>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a class="active" href="status.html">Status</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+</header>
+<main>
+  <h1>Status</h1>
+  <p class="sub">Network health at a glance — replaces the old Boards page.</p>
+
+  <div class="grid">
+    <div class="card stat">
+      <div class="label">Uptime (30d)</div>
+      <div class="value">99.7%</div>
+      <div class="delta">all boards</div>
+    </div>
+    <div class="card stat">
+      <div class="label">API latency</div>
+      <div class="value">86ms</div>
+      <div class="delta">p95</div>
+    </div>
+    <div class="card stat">
+      <div class="label">Queue depth</div>
+      <div class="value">0</div>
+      <div class="delta">healthy</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Incidents</h2>
+    <table>
+      <thead><tr><th>Date</th><th>Board</th><th>What happened</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Aug 30</td><td>Hallway</td><td>Wi-Fi dropout, 22 min</td><td><span class="chip live">resolved</span></td></tr>
+        <tr><td>Aug 18</td><td>Lobby</td><td>Stuck flap on module 14</td><td><span class="chip live">resolved</span></td></tr>
+        <tr><td>Aug 02</td><td>Workshop</td><td>Firmware rollback</td><td><span class="chip idle">monitoring</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+</body>
+</html>
